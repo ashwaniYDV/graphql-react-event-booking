@@ -14,5 +14,5 @@ $ npm install
 ```sh
 $ npm start
 ```
-This will start both the backend and frontend servers using concurrently
+This will start both the backend and frontend servers using concurrently<br/>
 Go to http://localhost:3000
