@@ -1,18 +1,32 @@
 # graphql-react-event-booking
 
-### Installation
+> GraphQL, React
 
-Install the dependencies and devDependencies and start the server.
+## Quick Start
 
-```sh
-$ npm install
-$ cd frontend
-$ npm install
+```bash
+# Install dependencies (server & client)
+npm install
+cd frontend && npm install
+
+# Run server & client (:4500 & :3000)
+npm run dev
+
+# Server only (:4500)
+npm run server
+
+# Client only (:3000)
+npm run client
+
+# Graphiql - http://localhost:4500/graphql
 ```
 
-### Development
-```sh
-$ npm start
-```
-This will start both the backend and frontend servers using concurrently<br/>
-Go to http://localhost:3000
+## App Info
+
+### Author
+
+[Ashwani Yadav](https://github.com/ashwaniYDV/)
+
+### Version
+
+1.0.0
