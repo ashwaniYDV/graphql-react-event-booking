@@ -6,8 +6,7 @@
 
 ```bash
 # Install dependencies (server & client)
-npm install
-cd frontend && npm install
+npm run add
 
 # Run server & client (:4500 & :3000)
 npm run dev
