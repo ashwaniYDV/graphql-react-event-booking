@@ -1,6 +1,7 @@
 const express = require('express')
 const graphqlHttp = require('express-graphql')
 const mongoose = require('mongoose')
+const path = require('path')
 
 const { DB_URI } = require('./configs/config')
 const graphqlSchema = require('./graphql/schema/index')
@@ -46,6 +47,13 @@ app.use('/graphql', graphqlHttp({
     graphiql: true
 }))
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'frontend/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'))
+    })
+}
 
 const PORT = process.env.PORT || 4500
 server.listen(PORT, () => {
